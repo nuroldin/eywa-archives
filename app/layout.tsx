@@ -18,7 +18,7 @@ const ibmPlexSans = localFont({
 	],
 });
 
-const BebasNeue = localFont({
+const bebasNeue = localFont({
 	src: [
 		{ path: "/fonts/BebasNeue-Regular.ttf", weight: "400", style: "normal" },
 	],
@@ -33,9 +33,9 @@ export const metadata: Metadata = {
 
 const RootLayout = ({ children }: { children: ReactNode }) => {
 	return (
-		<html className="dark" lang="en" suppressHydrationWarning>
+		<html lang="en" suppressHydrationWarning>
 			<body
-				className={`${ibmPlexSans.className} ${BebasNeue.variable} antialiased`}
+				className={`${ibmPlexSans.className} ${bebasNeue.variable} antialiased`}
 			>
 				<ThemeProvider
 					attribute="class"

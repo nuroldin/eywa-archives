@@ -1,3 +1,8 @@
+@font-face {
+	font-family: BebasNeue;
+	src: url("./fonts/BebasNeue-Regular.ttf");
+}
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -5,7 +10,7 @@
 
 @theme {
 	--font-ibm-plex-sans: IBM Plex Sans, sans-serif;
-	--font-bebas-neue: var(--bebas-neue);
+	--font-bebas-neue: BebasNeue, sans-serif;
 
 	--color-background: hsl(var(--background));
 	--color-foreground: hsl(var(--foreground));

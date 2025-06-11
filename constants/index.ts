@@ -41,11 +41,19 @@ export const adminSideBarLinks = [
 ];
 
 export const FIELD_NAMES = {
-	fullname: "Full name",
+	fullName: "Full Name",
 	email: "Email",
 	universityId: "University ID Number",
 	password: "Password",
 	universityCard: "Upload University ID Card",
+};
+
+export const FIELD_GUIDES = {
+	fullName: "e.g. Adeeb Hassannoor",
+	email: "e.g. adeeb.hassannoor@msumain.edu.ph",
+	universityId: "e.g. 201409972",
+	password: "e.g. 12345678",
+	universityCard: "e.g. university-id-card.jpg",
 };
 
 export const FIELD_TYPES = {
@@ -71,6 +79,7 @@ export const sampleBooks = [
 		videoUrl: "/sample-video.mp4?updatedAt=1722593504152",
 		summary:
 			"A dazzling novel about all the choices that go into a life well lived, The Midnight Library tells the story of Nora Seed as she finds herself between life and death. A dazzling novel about all the choices that go into a life well lived, The Midnight Library tells the story of Nora Seed as she finds herself between life and death.",
+		isLoanedBook: true,
 	},
 	{
 		id: 2,

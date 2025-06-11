@@ -24,6 +24,7 @@ import {
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { FIELD_NAMES, FIELD_GUIDES } from "@/constants";
+import ImageUpload from "./ImageUpload";
 
 interface Props<T extends FieldValues> {
 	schema: ZodTypeAny;
@@ -74,23 +75,30 @@ const AuthForm = <T extends FieldValues>({
 										{FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]}
 									</FormLabel>
 									<FormControl>
-										<Input
-											placeholder={
-												FIELD_GUIDES[field.name as keyof typeof FIELD_GUIDES]
-											}
-											{...field}
-											type={field.name === "password" ? "password" : "text"}
-										/>
+										{field.name === "universityCard" ? (
+											<ImageUpload />
+										) : (
+											<Input
+												required
+												placeholder={
+													FIELD_GUIDES[field.name as keyof typeof FIELD_GUIDES]
+												}
+												{...field}
+												type={
+													FIELD_NAMES[field.name as keyof typeof FIELD_NAMES]
+												}
+												className="form-input"
+											/>
+										)}
 									</FormControl>
-									<FormDescription>
-										This is your public display name.
-									</FormDescription>
 									<FormMessage />
 								</FormItem>
 							)}
 						/>
 					))}
-					<Button type="submit">Submit</Button>
+					<Button className="form-btn" type="submit">
+						{isSignIn ? "Sign In" : "Sign Up"}
+					</Button>
 				</form>
 			</Form>
 			<p className="text-center text-base font-medium">
